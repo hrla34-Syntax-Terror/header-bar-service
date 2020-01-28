@@ -1,4 +1,5 @@
 import React from 'react';
+import TopNav from './TopNav.jsx';
 
 class App extends React.Component {
   constructor (props) {
@@ -10,7 +11,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>This is the APP</div>
+      <div>
+        <TopNav></TopNav>
+      </div>
     );
   }
 }
