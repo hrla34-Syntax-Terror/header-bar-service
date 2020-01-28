@@ -10,7 +10,8 @@
   "scripts": {
     "seed": "node database/seed.js",
     "test": "jest",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "build": "webpack -d -w"
   },
   "jest": {
     "testEnvironment": "node"
@@ -23,9 +24,11 @@
     "express": "^4.17.1",
     "jest": "^25.1.0",
     "mongoose": "^5.8.10",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "react": "^16.12.0"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor"
+    "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor",
+    "webpack": "^4.41.5"
   }
 }
