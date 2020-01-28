@@ -10,12 +10,14 @@
   "scripts": {
     "seed": "node database/seed.js",
     "test": "jest",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "build": "webpack -d -w"
   },
   "jest": {
     "testEnvironment": "node"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -23,9 +25,16 @@
     "express": "^4.17.1",
     "jest": "^25.1.0",
     "mongoose": "^5.8.10",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor"
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
