@@ -13,4 +13,4 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use('/api', router);
 
-app.listen(port, () => console.log(`Server listening on port ${port}`));
+app.listen(port, () => console.log(`\u001b[1;34m Server listening on port ${port}`));
