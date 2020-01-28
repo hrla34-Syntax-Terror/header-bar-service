@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "name": "dog backpacks"
+  },
+  {
+    "id": 2,
+    "name": "dog gear"
+  },
+  {
+    "id": 3,
+    "name": "dog collars"
+  },
+  {
+    "id": 4,
+    "name": "jackets for men"
+  },
+  {
+    "id": 5,
+    "name": "jackets for women"
+  },
+  {
+    "id": 6,
+    "name": "jackets for kids"
+  },
+  {
+    "id": 7,
+    "name": "yoga mat"
+  },
+  {
+    "id": 8,
+    "name": "yoga pants"
+  },
+  {
+    "id": 9,
+    "name": "tentree"
+  },
+  {
+    "id": 10,
+    "name": "tents"
+  },
+  {
+    "id": 11,
+    "name": "carabiners"
+  },
+  {
+    "id": 12,
+    "name": "food"
+  },
+  {
+    "id": 13,
+    "name": "food freeze-dried"
+  },
+  {
+    "id": 14,
+    "name": "food storage"
+  },
+  {
+    "id": 15,
+    "name": "food energy"
+  },
+  {
+    "id": 16,
+    "name": "bear-resistant food containers"
+  },
+  {
+    "id": 17,
+    "name": "bear spray"
+  },
+  {
+    "id": 18,
+    "name": "bear bells"
+  },
+  {
+    "id": 19,
+    "name": "bear minimum"
+  },
+  {
+    "id": 20,
+    "name": "socks"
+  },
+  {
+    "id": 21,
+    "name": "socks for women"
+  },
+  {
+    "id": 22,
+    "name": "socks for men"
+  },
+  {
+    "id": 23,
+    "name": "socks liners"
+  },
+  {
+    "id": 24,
+    "name": "down jackets"
+  },
+  {
+    "id": 25,
+    "name": "down sleepingbag"
+  },
+  {
+    "id": 26,
+    "name": "sleeping bags"
+  },
+  {
+    "id": 27,
+    "name": "sleeping bag liners"
+  },
+  {
+    "id": 28,
+    "name": "sleeping bags - men"
+  },
+  {
+    "id": 29,
+    "name": "sleeping bags - women"
+  },
+  {
+    "id": 30,
+    "name": "trekking poles"
+  },
+  {
+    "id": 31,
+    "name": "teva for women"
+  },
+  {
+    "id": 32,
+    "name": "thule"
+  },
+  {
+    "id": 33,
+    "name": "therm-a-rest pads"
+  },
+  {
+    "id": 34,
+    "name": "trail-running shoes"
+  },
+  {
+    "id": 35,
+    "name": "tent backpacking"
+  },
+  {
+    "id": 36,
+    "name": "teva"
+  },
+  {
+    "id": 37,
+    "name": "travel backpacks"
+  },
+  {
+    "id": 38,
+    "name": "backpacks"
+  },
+  {
+    "id": 39,
+    "name": "backpack shoulder straps"
+  },
+  {
+    "id": 40,
+    "name": "hydration backpacks"
+  },
+  {
+    "id": 41,
+    "name": "rei backpacks"
+  },
+  {
+    "id": 42,
+    "name": "north face backpacks"
+  },
+  {
+    "id": 43,
+    "name": "bikes"
+  },
+  {
+    "id": 44,
+    "name": "bike racks"
+  },
+  {
+    "id": 45,
+    "name": "bike helmets"
+  },
+  {
+    "id": 46,
+    "name": "bike racks hitch-mount"
+  },
+  {
+    "id": 47,
+    "name": "bike lights"
+  },
+  {
+    "id": 48,
+    "name": "bike stand"
+  },
+  {
+    "id": 49,
+    "name": "bike accessories"
+  },
+  {
+    "id": 50,
+    "name": "bike trailers for kids"
+  },
+  {
+    "id": 51,
+    "name": "bike shorts"
+  },
+  {
+    "id": 52,
+    "name": "bike shoes"
+  },
+  {
+    "id": 53,
+    "name": "shoes - men"
+  },
+  {
+    "id": 54,
+    "name": "shoes - women"
+  },
+  {
+    "id": 55,
+    "name": "shoes"
+  },
+  {
+    "id": 56,
+    "name": "shoes for hiking"
+  },
+  {
+    "id": 57,
+    "name": "shoes - kids"
+  },
+  {
+    "id": 58,
+    "name": "shoes for running"
+  },
+  {
+    "id": 59,
+    "name": "shoes for water"
+  },
+  {
+    "id": 60,
+    "name": "shoes for cycling"
+  },
+  {
+    "id": 61,
+    "name": "hiking poles"
+  },
+  {
+    "id": 62,
+    "name": "hiking pants"
+  },
+  {
+    "id": 63,
+    "name": "hiking shoes"
+  },
+  {
+    "id": 64,
+    "name": "hiking socks"
+  },
+  {
+    "id": 65,
+    "name": "hiking shorts"
+  },
+  {
+    "id": 66,
+    "name": "pants hiking"
+  },
+  {
+    "id": 67,
+    "name": "pants convertible"
+  },
+  {
+    "id": 68,
+    "name": "pants fleece"
+  },
+  {
+    "id": 69,
+    "name": "pants rain"
+  },
+  {
+    "id": 70,
+    "name": "water bottles"
+  },
+  {
+    "id": 71,
+    "name": "water filters"
+  },
+  {
+    "id": 72,
+    "name": "water bladders"
+  },
+  {
+    "id": 73,
+    "name": "water shoes"
+  },
+  {
+    "id": 74,
+    "name": "water bottle nalgene"
+  },
+  {
+    "id": 75,
+    "name": "waterproof jackets"
+  },
+  {
+    "id": 76,
+    "name": "waterproof gloves"
+  },
+  {
+    "id": 77,
+    "name": "waterproof shoes"
+  },
+  {
+    "id": 78,
+    "name": "water purifier"
+  },
+  {
+    "id": 79,
+    "name": "snow shoes"
+  },
+  {
+    "id": 80,
+    "name": "snow peak"
+  },
+  {
+    "id": 81,
+    "name": "snowboard boots"
+  },
+  {
+    "id": 82,
+    "name": "snow pants"
+  },
+  {
+    "id": 83,
+    "name": "snow boots"
+  },
+  {
+    "id": 84,
+    "name": "snowboards"
+  },
+  {
+    "id": 85,
+    "name": "snow googles"
+  },
+  {
+    "id": 86,
+    "name": "climbing shoes"
+  },
+  {
+    "id": 87,
+    "name": "climbing harnesses"
+  },
+  {
+    "id": 88,
+    "name": "climbing helmets"
+  },
+  {
+    "id": 89,
+    "name": "climbing ropes"
+  },
+  {
+    "id": 90,
+    "name": "climbing tape"
+  },
+  {
+    "id": 91,
+    "name": "climbing hardware"
+  },
+  {
+    "id": 92,
+    "name": "climbing chalk"
+  },
+  {
+    "id": 93,
+    "name": "climbing holds"
+  },
+  {
+    "id": 94,
+    "name": "stove for backpacking"
+  },
+  {
+    "id": 95,
+    "name": "stoves"
+  },
+  {
+    "id": 96,
+    "name": "stove fuel"
+  },
+  {
+    "id": 97,
+    "name": "stove jetboil"
+  },
+  {
+    "id": 98,
+    "name": "stove coleman"
+  },
+  {
+    "id": 99,
+    "name": "camera backpacks"
+  },
+  {
+    "id": 100,
+    "name": "camera bags"
+  }
+]
