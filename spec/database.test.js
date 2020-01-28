@@ -5,14 +5,8 @@ const models = require('../database/models.js');
 describe('database', () => {
 
   // importing models will actually create the connection for us!
-  // beforeAll(async (done) => {
-  //   const mongoURI = 'mongodb://localhost/rei-test';
-  //   db = await mongoose.connect(mongoURI, { useNewUrlParser: true });
-  //   done();
-  // });
-
-  // make sure to dump the collection before each round of testing
-  afterEach(async (done) => {
+  // just make sure we dump everything before we start!
+  beforeAll(async (done) => {
     await mongoose.connection.collections['searchitems'].deleteMany();
     done();
   });
