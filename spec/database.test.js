@@ -3,32 +3,34 @@ mongoose.Promise = global.Promise;
 const models = require('../database/models.js');
 
 describe('database', () => {
-  var db;
-  
-  beforeAll(async () => {
-    const mongoURI = 'mongodb://localhost/rei-test';
-    db = await mongoose.connect(mongoURI, { useNewUrlParser: true });
-  });
 
-  afterEach(async () => {
+  // importing models will actually create the connection for us!
+  // beforeAll(async (done) => {
+  //   const mongoURI = 'mongodb://localhost/rei-test';
+  //   db = await mongoose.connect(mongoURI, { useNewUrlParser: true });
+  //   done();
+  // });
+
+  // make sure to dump the collection before each round of testing
+  afterEach(async (done) => {
     await mongoose.connection.collections['searchitems'].deleteMany();
+    done();
   });
 
-  afterAll(async () => {
+  afterAll(async (done) => {
     await mongoose.connection.close(true)
-      .then(() => console.log('closed'))
-      .catch(err => console.error(err));
+    done();
   });
 
-  test ('should get all the items', () => {
+  test ('should get all the items', (done) => {
     var sampleSearches = [{ id: 1, name: "testItem1" }, { id: 2, name: "testItem2" }, { id: 3, name: "testItem3" }];
-
     return models.addItems(sampleSearches)
       .then(() => {
         return models.getAll();
       })
       .then(dbResponse => {
         expect(dbResponse.length).toBe(3);
+        done();
       });
   });
   
