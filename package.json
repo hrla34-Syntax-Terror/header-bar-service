@@ -9,7 +9,7 @@
   },
   "scripts": {
     "seed": "node database/seed.js",
-    "test": "jest --force-exit",
+    "test": "jest",
     "start": "node server/index.js",
     "build": "webpack -d -w"
   },
