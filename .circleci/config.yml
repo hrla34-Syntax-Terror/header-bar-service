@@ -18,6 +18,9 @@ jobs:
 
     steps:
       - checkout
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
 
       # Download and cache dependencies
       - restore_cache:
@@ -26,12 +29,15 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm install
+      - run:
+          name: install-npm-wee
+          command: npm install
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
-      - run: npm run test
+      - run: # run tests
+          name: test
+          command: npm run test
