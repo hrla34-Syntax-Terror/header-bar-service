@@ -11,9 +11,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <header>
         <TopNav></TopNav>
-      </div>
+      </header>
     );
   }
 }
