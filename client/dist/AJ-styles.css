@@ -1,0 +1,126 @@
+/*-------------------- START: CSS RESET -------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*-------------------- END: CSS RESET -------------------- */
+
+/* Element that we attach to */
+#header {
+  background-color: white;
+}
+
+/* Div that wraps the ul */
+#AJnavwrapper {
+  background-color: #2a2a2a;
+  text-align: left;
+  padding-left: 40px;
+  padding-right: 200px;
+
+}
+
+/* UL for the nav */
+#AJtopnav {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  background-color: #2a2a2a;
+  color: white;
+  height: 40px;
+  width: 100%;
+  flex-wrap: nowrap;
+
+}
+
+li.item {
+  color: #ccc;
+  font-size: 14px;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 11px 8px 8px;
+  position: relative;
+}
+
+li.item:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+#selected {
+  border-bottom: 1px solid #fff;
+}
+
+#selected:before{
+  border-top-width: 0!important;
+  border-right-width: 7px;
+  border-bottom-width: 7px;
+  border-left-width: 7px;
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  border-color: transparent;
+  border-style: solid;
+  border-top-width: 0!important;
+  border-bottom-color: inherit;
+  transform: translate(-13px,-1px);
+}
+
+#selected:after {
+  border-top-width: 0!important;
+  border-right-width: 5px;
+  border-bottom-width: 5px;
+  border-left-width: 5px;
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  border-color: transparent;
+  border-style: solid;
+  border-top-width: 0!important;
+  border-bottom-color: inherit;
+  transform: translate(-4px,-1px);
+}

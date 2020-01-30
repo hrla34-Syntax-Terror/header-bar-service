@@ -22,5 +22,5 @@ coverage
 
 # Compiled Dirs (http://nodejs.org/api/addons.html)
 build/
-dist/
+# dist/ might want to undo this comment, but for now leave it as is
 
