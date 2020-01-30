@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App.jsx';
 
-ReactDOM.render(<div>vorp</div>, document.getElementById('header'));
+ReactDOM.render(<App/>, document.getElementById('header'));
 

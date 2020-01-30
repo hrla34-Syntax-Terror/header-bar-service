@@ -2,7 +2,7 @@ const models = require('./index');
 
 module.exports = {
   getAll: () => {
-    return models.find();
+    return models.find().sort({id: 1});
   },
   addItems: (items) => {
     return models.create(items);

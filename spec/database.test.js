@@ -28,7 +28,7 @@ describe('database', () => {
       });
   });
   
-  test ('adds a search entry', () => {
+  test ('adds a search entry', (done) => {
     return models.addItems({id: 1000, name: "test_item"})
     .then(() => {
       return models.getAll();
@@ -38,6 +38,7 @@ describe('database', () => {
         id: expect.any(Number),
         name: expect.any(String)
       }));
+      done();
     });
   });
 });
