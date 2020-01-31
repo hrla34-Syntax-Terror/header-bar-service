@@ -18,7 +18,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, svg, button{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -56,6 +56,7 @@ table {
 /* Exists just to make the scroll bar appear */
 #spacer {
   height: 5000px;
+  background-color: grey;
 }
 /* Element that we attach to */
 #header {
@@ -141,6 +142,14 @@ li.item:hover {
 }
 /* --------------------- END: Top Nav --------------------- */
 
+::placeholder {
+  color: white;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
 /* Div that wraps the main header section */
 #AJmainheader {
   box-sizing: border-box;
@@ -152,4 +161,41 @@ li.item:hover {
 
   display: flex;
   padding: 19px 30px 25px;
+  /* margin-right: 20px; */
+  font-family: 'Roboto', sans-serif;
+}
+
+#AJreilogo {
+  margin-right: 30px;
+}
+
+#AJheaderactions {
+  font-size: 18px;
+  height: auto;
+  min-width: 992px;
+}
+
+form {
+  display: flex;
+  width: 50%;
+}
+
+#AJsearchbox {
+  padding: 12px 20px;
+  width: 80%;
+  font-size: 18px;
+  background-color: #555;
+  color: #fff;
+  border: 0px none;
+}
+
+#AJsearchbutton {
+  box-sizing: border-box;
+  background-color: #555;
+  padding: 14px;
+  width: 10%;
+}
+
+svg {
+  fill: white;
 }

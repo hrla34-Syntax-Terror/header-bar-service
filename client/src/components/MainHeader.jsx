@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchBar from './Searchbar.jsx';
 
 class MainHeader extends React.Component {
   constructor (props) {
@@ -11,7 +12,10 @@ class MainHeader extends React.Component {
   render() {
     return (
       <div id="AJmainheader">
-        <img src='https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/rei-co-op-logo-white.svg'></img>
+        <img id="AJreilogo" src='https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/rei-co-op-logo-white.svg'></img>
+        <div id="AJheaderactions">
+          <SearchBar/>
+        </div>
       </div>
     );
   }
