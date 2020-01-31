@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBar from './Searchbar.jsx';
+import Submenu from './Submenu.jsx';
 
 class MainHeader extends React.Component {
   constructor (props) {
@@ -18,6 +19,7 @@ class MainHeader extends React.Component {
             <SearchBar/>
           </div>
           <hr/>
+          <Submenu></Submenu>
         </div>
       </div>
     );
