@@ -1,5 +1,5 @@
 /*-------------------- START: CSS RESET -------------------- */
-/* #region Main */
+/* #region CSS Reset */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -65,6 +65,7 @@ table {
 }
 
 /* --------------------- START: Top Nav --------------------- */
+/* #region TopNav */
 /* Div that wraps the ul */
 #AJnavwrapper {
   background-color: #2a2a2a;
@@ -140,15 +141,10 @@ li.item:hover {
   border-bottom-color: inherit;
   transform: translate(-4px,-1px);
 }
+/* #endregion Main */
 /* --------------------- END: Top Nav --------------------- */
 
-::placeholder {
-  color: white;
-}
 
-input:focus::placeholder {
-  color: transparent;
-}
 
 /* Div that wraps the main header section */
 #AJmainheader {
@@ -160,8 +156,9 @@ input:focus::placeholder {
   margin-left: auto;
 
   display: flex;
+  flex-wrap: wrap;
   padding: 19px 30px 25px;
-  /* margin-right: 20px; */
+
   font-family: 'Roboto', sans-serif;
 }
 
@@ -172,7 +169,7 @@ input:focus::placeholder {
 #AJheaderactions {
   font-size: 18px;
   height: auto;
-  min-width: 992px;
+  min-width: 900px;
 }
 
 form {
@@ -189,13 +186,34 @@ form {
   border: 0px none;
 }
 
+::placeholder {
+  color: white;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
 #AJsearchbutton {
   box-sizing: border-box;
   background-color: #555;
-  padding: 14px;
+  padding: 11px;
   width: 10%;
 }
 
 svg {
-  fill: white;
+  fill: #a1c900;
 }
+
+#AJmainheader hr {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 900px;
+  /* width: 100%; */
+  border: 0;
+  margin: 16px 0 0;
+  border-top: 1px solid #e5e5e5;
+  box-sizing: content-box;
+  height: 0;
+}
+

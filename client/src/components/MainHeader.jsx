@@ -13,8 +13,11 @@ class MainHeader extends React.Component {
     return (
       <div id="AJmainheader">
         <img id="AJreilogo" src='https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/rei-co-op-logo-white.svg'></img>
-        <div id="AJheaderactions">
-          <SearchBar/>
+        <div id="AJheaderbody">
+          <div id="AJheaderactions">
+            <SearchBar/>
+          </div>
+          <hr/>
         </div>
       </div>
     );
