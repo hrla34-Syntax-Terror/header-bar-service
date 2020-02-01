@@ -185,11 +185,12 @@ form {
 
 #AJsearchbox {
   padding: 12px 20px;
-  width: 80%;
+  width: 75%;
   font-size: 18px;
   background-color: #555;
   color: #fff;
   border: 0px none;
+  height: 100%;
 }
 
 ::placeholder {
@@ -204,7 +205,8 @@ input:focus::placeholder {
   box-sizing: border-box;
   background-color: #555;
   padding: 11px;
-  width: 10%;
+  width: 8.75%;
+  height: 100%;
   fill: white;
 }
 
@@ -226,6 +228,7 @@ input:focus::placeholder {
 #AJsectionnavwrap {
   padding-top: 10px;
   height: 45%;
+  position: relative;
 }
 #AJsectionnav {
   list-style-type: none;
@@ -265,4 +268,112 @@ input:focus::placeholder {
   height: 20px;
   max-width: 30px;
   margin-top: -4px;
+}
+
+
+#AJsectionactions {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 22px 15px; */
+  /* margin-bottom: 20px; */
+  position: absolute;
+  top: -60px;
+  right: 0px;
+  /* background-color: lightgrey; */
+  color: white;
+  width: 30%;
+  height: 50%;
+
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#AJsectionactions li{
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+#AJsectionactions{
+  fill: white;
+}
+
+.AJactionsvgwrap {
+  margin-left: 5px;
+  height: 25px;
+  width: 25px;
+}
+
+
+.AJhovergreen:hover {
+  fill: #a1c900 !important;
+  color: #a1c900 !important;
+}
+
+#AJsigninmodal{
+  position: absolute;
+  top: 50px;
+  left: -105px;
+  background-color: white;
+  width: 300px;
+  height: 421px;
+  box-sizing: border-box;
+  box-shadow: -3px 3px 3px 0 rgba(0,0,0,.2), 3px 3px 3px 0 rgba(0,0,0,.2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px 30px 10px;
+}
+
+#AJsigninwrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.AJmtns {
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  background-color: #fff;
+  z-index: 900;
+  left: 110px;
+  width: 79px;
+}
+
+#AJsigninform {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: black;
+  font-family: 'Roboto Condensed',sans-serif;
+  width: 100%;
+}
+
+#AJemailinput{
+  margin-bottom: 26px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#AJemailinput div {
+  box-sizing: border-box;
+  margin-bottom: 4px;
+
+}
+#AJemailinputbox {
+  width: 100%;
+}
+
+
+#AJpasswordinput{
+  margin-bottom: 26px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+#AJpasswordinputbox {
+  width: 100%;
 }
