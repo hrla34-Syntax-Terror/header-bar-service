@@ -31,6 +31,11 @@ class Submenu extends Component {
           {this.state.signinVisible ? 
             <li className="sign-in-dropdown" id="AJsigninmodal">
               <div id="AJsigninwrapper">
+                <button id="AJclosebutton" onClick={this.onSignInClick}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M13.406 12.006l3.297-3.296a1 1 0 10-1.414-1.414l-3.297 3.295-3.285-3.295A1 1 0 107.293 8.71l3.285 3.295-3.285 3.288a1 1 0 001.414 1.415l3.285-3.289 3.297 3.289a1 1 0 001.414-1.415l-3.297-3.287z"/>
+                  </svg>
+                </button>
                 <div class="mtns"> 
                   <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
                     <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
@@ -44,13 +49,13 @@ class Submenu extends Component {
                   <div id="AJpasswordinput">
                     <div>Password</div>
                     <input id="AJpasswordinputbox"></input>
-                    <div >Forgot password?</div>
+                    <div id="AJforgotpassword">Forgot password?</div>
                   </div>
-                  <div>
+                  <div id="AJdisclaimer">
                     By signing into your account, you agree to REI's Terms of Use and acknowledge you have read its Privacy Policy.
                   </div>
-                  <button>Sign in</button>
-                  <button>Create an account</button>
+                  <button id="AJsigninbtn" className="AJmodalbtn">Sign in</button>
+                  <button id="AJcreatebtn" className="AJmodalbtn">Create an account</button>
                 </form>
               </div>
             </li> : null}
