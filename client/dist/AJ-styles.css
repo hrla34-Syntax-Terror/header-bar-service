@@ -240,7 +240,7 @@ input:focus::placeholder {
   align-items: center;
 }
 
-.AJmenu-level-1 {
+.AJmenulevel1item {
   box-sizing: border-box;
   color: white;
   fill: white;
@@ -249,7 +249,7 @@ input:focus::placeholder {
   font-size: 18px;
 }
 
-.AJmenu-level-1:hover{
+.AJmenulevel1item:hover{
   color: #a1c900;
   fill: #a1c900;
 }

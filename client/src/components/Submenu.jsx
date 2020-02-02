@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SectionActions from './SectionActions.jsx';
 
 class Submenu extends Component {
   constructor (props) {
@@ -17,84 +18,52 @@ class Submenu extends Component {
   render() {
     return (
       <div id="AJsectionnavwrap">
-        <ul id="AJsectionactions">
-          <li className="AJsign-in AJhovergreen" onClick={this.onSignInClick}>
-            <div>
-              SIGN IN
-            </div>
-            <div id="AJaccountprofilesvgwrap" className="AJactionsvgwrap" >
-              <svg id="AJaccount-profile" viewBox="0 0 24 24">
-                <path d="M12 12a3.5 3.5 0 100-7 3.5 3.5 0 000 7zm6.762 7a7.073 7.073 0 00-13.524 0h13.524zM4 21a1 1 0 01-1-1h-.008a9.08 9.08 0 01.02-.159 9.08 9.08 0 015.454-7.127 5.5 5.5 0 117.068 0A9.08 9.08 0 0121.008 20H21a1 1 0 01-1 1H4z"/>
-              </svg>
-            </div>
-          </li>
-          {this.state.signinVisible ? 
-            <li className="sign-in-dropdown" id="AJsigninmodal">
-              <div id="AJsigninwrapper">
-                <button id="AJclosebutton" onClick={this.onSignInClick}>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M13.406 12.006l3.297-3.296a1 1 0 10-1.414-1.414l-3.297 3.295-3.285-3.295A1 1 0 107.293 8.71l3.285 3.295-3.285 3.288a1 1 0 001.414 1.415l3.285-3.289 3.297 3.289a1 1 0 001.414-1.415l-3.297-3.287z"/>
-                  </svg>
-                </button>
-                <div class="mtns"> 
-                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
-                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
-                  </svg> 
-                </div>
-                <form id="AJsigninform" onSubmit={(e) => e.preventDefault()}>
-                  <div id="AJemailinput">
-                    <div>Email</div>
-                    <input id="AJemailinputbox"></input>
-                  </div>
-                  <div id="AJpasswordinput">
-                    <div>Password</div>
-                    <input id="AJpasswordinputbox"></input>
-                    <div id="AJforgotpassword">Forgot password?</div>
-                  </div>
-                  <div id="AJdisclaimer">
-                    By signing into your account, you agree to REI's Terms of Use and acknowledge you have read its Privacy Policy.
-                  </div>
-                  <button id="AJsigninbtn" className="AJmodalbtn">Sign in</button>
-                  <button id="AJcreatebtn" className="AJmodalbtn">Create an account</button>
-                </form>
-              </div>
-            </li> : null}
-          <li className="AJstores AJhovergreen">
-            <div>
-              STORES
-            </div>
-            <div id="AJstoressvgwrap" className="AJactionsvgwrap">
-              <svg id="AJlocation-pin-stroke" viewBox="0 0 24 24">
-                <path d="M12 2a8 8 0 018 8c0 2.81-2.428 6.713-7.284 11.698a1.006 1.006 0 01-1.432 0C6.428 16.713 4 12.811 4 10a8 8 0 018-8zm0 2a6 6 0 00-6 6c0 2.013 1.968 5.282 6 9.552 4.032-4.27 6-7.539 6-9.552a6 6 0 00-6-6zm0 4.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/>
-              </svg>
-            </div>
-          </li>
-          <li className="AJcart AJhovergreen">
-            <div>
-              CART
-            </div>
-            <div id="AJcartsvgwrap" className="AJactionsvgwrap ">
-              <svg id="AJcart" viewBox="0 0 24 24">
-                <path d="M9.25 18.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zm7.5 0a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM6 3c.317 0 .6.147.782.377.085.105.15.23.187.369L7.573 6H20a1 1 0 01.936.648c.073.19.089.404.032.616l-1.607 5.998a1 1 0 01-1.048.738H9.168l-.402 1.5H18a1 1 0 010 2H7.47a1 1 0 01-.864-.497.997.997 0 01-.107-.77l.873-3.258L5.236 5H4a1 1 0 110-2h2zm12.7 5H8.11l1.071 4h8.447L18.7 8z"/>
-              </svg>
-            </div>
-          </li>
-        </ul>
+        <SectionActions></SectionActions>
         <ul id="AJsectionnav">
-          <li className="AJmenu-level-1">Camp & Hike</li>
-          <li className="AJmenu-level-1">Climb</li>
-          <li className="AJmenu-level-1">Cycle</li>
-          <li className="AJmenu-level-1">Paddle</li>
-          <li className="AJmenu-level-1">Run</li>
-          <li className="AJmenu-level-1">Snow</li>
-          <li className="AJmenu-level-1">Travel</li>
-          <li className="AJmenu-level-1">Yoga</li>
-          <li className="AJmenu-level-1">Men</li>
-          <li className="AJmenu-level-1">Women</li>
-          <li className="AJmenu-level-1">Kids</li>
-          <li className="AJmenu-level-1">Deals</li>
-          <li className="AJmenu-level-1">More</li>
-          <li className="AJmenu-level-1">
+          <li className="AJmenulevel1item">
+            Camp & Hike
+            <div className="AJmenulevel2wrap">
+              {/* <div className="AJmenulevel2title">Camp & Hike</div> */}
+              
+            </div>
+          </li>
+          <li className="AJmenulevel1item">
+            Climb
+          </li>
+          <li className="AJmenulevel1item">
+            Cycle
+          </li>
+          <li className="AJmenulevel1item">
+            Paddle
+          </li>
+          <li className="AJmenulevel1item">
+            Run
+          </li>
+          <li className="AJmenulevel1item">
+            Snow
+          </li>
+          <li className="AJmenulevel1item">
+            Travel
+          </li>
+          <li className="AJmenulevel1item">
+            Yoga
+          </li>
+          <li className="AJmenulevel1item">
+            Men
+          </li>
+          <li className="AJmenulevel1item">
+            Women
+          </li>
+          <li className="AJmenulevel1item">
+            Kids
+          </li>
+          <li className="AJmenulevel1item">
+            Deals
+          </li>
+          <li className="AJmenulevel1item">
+            More
+          </li>
+          <li className="AJmenulevel1item">
             <div id="AJrei-outlet-wrap">
               <svg id="AJrei-outlet" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 251 30">
                 <path d="M 3.15 29.3296 H 0.84 C 0.378 29.3296 0 28.9525 0 28.4916 V 0.837989 C 0 0.377095 0.378 0 0.84 0 h 2.31 c 0.462 0 0.84 0.377095 0.84 0.837989 V 28.4916 c 0 0.335196 -0.252 0.837989 -0.84 0.837989 Z m 10.016 -0.837989 L 8.21 18.1006 c -0.21 -0.502793 -0.21 -0.879888 -0.21 -1.34078 v -2.30447 c 0 -0.460894 0.378 -0.837989 0.84 -0.837989 c 2.562 0 4.704 -2.17877 4.704 -4.81844 c 0 -2.63966 -2.142 -4.81844 -4.704 -4.81844 c -0.462 0 -0.84 -0.377095 -0.84 -0.837989 V 0.837989 C 8 0.377095 8.378 0 8.84 0 C 13.712 0 17.66 3.93855 17.66 8.79888 c 0 3.18436 -1.806 6.07542 -4.368 7.5838 c -0.798 0.460894 -1.092 0.75419 -0.714 1.50838 l 4.956 10.1816 c 0.294 0.628492 0.042 1.25698 -0.798 1.25698 h -2.352 c -0.672 0 -0.966 -0.335196 -1.218 -0.837989 Z m 18.824 -16.5503 c 0 0.251397 0.168 0.418994 0.42 0.418994 h 9.954 c 0.462 0 0.84 0.377095 0.84 0.837989 v 2.30447 c 0 0.460894 -0.378 0.837989 -0.84 0.837989 h -9.954 c -0.252 0 -0.42 0.167598 -0.42 0.418994 v 8.17039 c 0 0.251397 0.168 0.418994 0.42 0.418994 h 10.5 c 0.462 0 0.84 0.377095 0.84 0.837989 v 2.30447 c 0 0.460894 -0.378 0.837989 -0.84 0.837989 H 28.84 c -0.462 0 -0.84 -0.377095 -0.84 -0.837989 V 0.837989 C 28 0.377095 28.378 0 28.84 0 h 13.986 c 0.462 0 0.84 0.377095 0.84 0.837989 V 3.14246 c 0 0.460894 -0.378 0.837989 -0.84 0.837989 H 32.41 c -0.252 0 -0.42 0.167598 -0.42 0.418994 v 7.5419 Z m 27.31 -7.8771 c 0 -0.251397 -0.168 -0.418994 -0.42 -0.418994 h -4.62 c -0.462 0 -0.84 -0.377095 -0.84 -0.837989 V 0.837989 c 0 -0.460894 0.378 -0.837989 0.84 -0.837989 H 68.33 c 0.462 0 0.84 0.377095 0.84 0.837989 v 1.96927 c 0 0.460894 -0.378 0.837989 -0.84 0.837989 h -4.62 c -0.252 0 -0.42 0.167598 -0.42 0.418994 v 21.1592 c 0 0.251397 0.168 0.418994 0.42 0.418994 h 5.04 c 0.462 0 0.84 0.377095 0.84 0.837989 v 2.01117 c 0 0.460894 -0.378 0.837989 -0.84 0.837989 H 53.84 c -0.462 0 -0.84 -0.377095 -0.84 -0.837989 v -2.01117 c 0 -0.460894 0.378 -0.837989 0.84 -0.837989 h 5.04 c 0.252 0 0.42 -0.167598 0.42 -0.418994 V 4.06425 Z M 100.156 15 c 0 -3.10056 0.168 -6.57821 0.882 -8.17039 c 0.63 -1.38268 1.386 -1.96927 2.394 -2.47207 c 0.462 -0.209497 0.840001 -0.460894 0.840001 -0.921788 V 0.670391 C 104.272 0.251397 103.978 0 103.6 0 c -0.546 0 -1.68 0.335196 -2.898 1.13128 c -1.26 0.879888 -2.52 2.13687 -3.486 4.44134 C 96.25 7.8771 96.04 11.1034 96.04 15 s 0.21 7.1229 1.176 9.42737 s 2.226 3.56145 3.486 4.44134 c 1.218 0.796089 2.352 1.13128 2.898 1.13128 c 0.378 0 0.672001 -0.251397 0.672001 -0.670391 v -2.76536 c 0 -0.460894 -0.378001 -0.71229 -0.840001 -0.921788 c -1.008 -0.502793 -1.764 -1.08939 -2.394 -2.47207 c -0.714 -1.59218 -0.882 -5.06983 -0.882 -8.17039 Z m 11.22 0 c 0 3.10056 -0.168 6.57821 -0.882 8.17039 c -0.63 1.38268 -1.386 1.96927 -2.394 2.47207 c -0.462 0.209497 -0.84 0.460894 -0.84 0.921788 v 2.76536 c 0 0.418994 0.294 0.670391 0.672 0.670391 c 0.546 0 1.68 -0.335196 2.898 -1.13128 c 1.26 -0.879888 2.52 -2.13687 3.486 -4.44134 c 0.966 -2.30447 1.176 -5.53073 1.176 -9.42737 s -0.21 -7.12291 -1.176 -9.42737 c -0.966 -2.30447 -2.226 -3.56145 -3.486 -4.44134 C 109.612 0.335196 108.478 0 107.932 0 c -0.378 0 -0.672 0.251397 -0.672 0.670391 V 3.43575 c 0 0.460894 0.378 0.71229 0.84 0.921788 c 1.008 0.502793 1.764 1.08939 2.394 2.47207 c 0.714 1.59218 0.882 5.06983 0.882 8.17039 Z M 128.49 20.9497 V 0.837989 C 128.49 0.377095 128.112 0 127.65 0 h -2.31 c -0.462 0 -0.84 0.377095 -0.84 0.837989 V 20.9497 c 0 5.02793 4.032 8.71508 9.45 8.71508 c 5.082 0 9.45 -3.68715 9.45 -8.71508 V 0.837989 c 0 -0.460894 -0.378 -0.837989 -0.84 -0.837989 h -2.31 c -0.462 0 -0.84 0.377095 -0.84 0.837989 V 20.9497 c 0 2.68156 -2.268 4.73464 -5.46 4.73464 c -2.73 0 -5.46 -1.38268 -5.46 -4.73464 Z m 24.71 -16.9693 h 5.586 c 0.252 0 0.42 0.167598 0.42 0.418994 V 28.4916 c 0 0.460894 0.378 0.837989 0.84 0.837989 h 2.31 c 0.462 0 0.84 -0.377095 0.84 -0.837989 V 4.39944 c 0 -0.251397 0.168 -0.418994 0.42 -0.418994 h 5.544 c 0.462 0 0.84 -0.377095 0.84 -0.837989 V 0.837989 c 0 -0.460894 -0.378 -0.837989 -0.84 -0.837989 h -15.96 c -0.462 0 -0.84 0.377095 -0.84 0.837989 V 3.14246 c 0 0.460894 0.378 0.837989 0.84 0.837989 Z m 32.15 20.9497 V 0.837989 c 0 -0.460894 -0.378 -0.837989 -0.84 -0.837989 h -2.31 c -0.462 0 -0.84 0.377095 -0.84 0.837989 V 28.4916 c 0 0.460894 0.378 0.837989 0.84 0.837989 h 13.818 c 0.462 0 0.84 -0.377095 0.84 -0.837989 v -2.30447 c 0 -0.460894 -0.378 -0.837989 -0.84 -0.837989 h -10.248 c -0.252 0 -0.42 -0.167598 -0.42 -0.418994 Z m 27 -12.9888 V 4.39944 c 0 -0.251397 0.168 -0.418994 0.42 -0.418994 h 10.416 c 0.462 0 0.84 -0.377095 0.84 -0.837989 V 0.837989 c 0 -0.460894 -0.378 -0.837989 -0.84 -0.837989 h -13.986 c -0.462 0 -0.84 0.377095 -0.84 0.837989 V 28.4916 c 0 0.460894 0.378 0.837989 0.84 0.837989 h 14.07 c 0.462 0 0.84 -0.377095 0.84 -0.837989 v -2.30447 c 0 -0.460894 -0.378 -0.837989 -0.84 -0.837989 h -10.5 c -0.252 0 -0.42 -0.167598 -0.42 -0.418994 v -8.17039 c 0 -0.251397 0.168 -0.418994 0.42 -0.418994 h 9.954 c 0.462 0 0.84 -0.377095 0.84 -0.837989 V 13.1983 c 0 -0.460894 -0.378 -0.837989 -0.84 -0.837989 h -9.954 c -0.252 0 -0.42 -0.167598 -0.42 -0.418994 Z m 21.85 -7.96089 h 5.586 c 0.252 0 0.42 0.167598 0.42 0.418994 V 28.4916 c 0 0.460894 0.378 0.837989 0.84 0.837989 H 243.356 c 0.462 0 0.84 -0.377095 0.84 -0.837989 V 4.39944 c 0 -0.251397 0.168 -0.418994 0.42 -0.418994 h 5.544 c 0.462 0 0.84 -0.377095 0.84 -0.837989 V 0.837989 C 251 0.377095 250.622 0 250.16 0 h -15.96 c -0.462 0 -0.84 0.377095 -0.84 0.837989 V 3.14246 c 0 0.460894 0.378 0.837989 0.84 0.837989 Z"/>
