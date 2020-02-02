@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
 import SectionActions from './SectionActions.jsx';
+import Submenu2 from './Submenu2.jsx';
 
 class Submenu extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      signinVisible: false,
+      campHikeVis: false,
+      climbVis: false,
+      cycleVis: false,
+      paddleVis: false,
+      runVis: false,
+      snowVis: false,
+      travelVis: false,
+      yogaVis: false,
+      menVis: false,
+      womenVis: false,
+      kidsVis: false,
+      dealsVis: false,
+      moreVis: false
     };
 
     this.onSignInClick = this.onSignInClick.bind(this);
@@ -22,10 +35,13 @@ class Submenu extends Component {
         <ul id="AJsectionnav">
           <li className="AJmenulevel1item">
             Camp & Hike
-            <div className="AJmenulevel2wrap">
-              {/* <div className="AJmenulevel2title">Camp & Hike</div> */}
-              
-            </div>
+            { this.state.campHikeVis ?
+              <div className="AJmenulevel2wrap">
+                {/* <div className="AJmenulevel2title">Camp & Hike</div> */}
+                
+              </div>
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
             Climb
