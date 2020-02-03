@@ -17,10 +17,24 @@ class Submenu2 extends React.Component {
   render () {
     return (
       <ul className="AJnavlevel2">
-        <li className="AJnavlevel2item">
-        </li>
-        <li>
-        </li>
+        {
+          this.props.lvl2.map(lvl2 => (
+            <li className="AJnavlevel2item">
+              <div className="AJnavlevel2title">
+                {lvl2.title}
+              </div>
+              <ul className="AJnavlevel3">
+                {
+                  lvl2.items.map((lvl3) => (
+                    <li className="AJnavlevel3item">
+                      {lvl3}
+                    </li>
+                  ))
+                }
+              </ul>
+            </li>
+          ))
+        }
       </ul>
     )
   }

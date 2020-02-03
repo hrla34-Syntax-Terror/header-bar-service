@@ -6,19 +6,21 @@ class Submenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      campHikeVis: false,
-      climbVis: false,
-      cycleVis: false,
-      paddleVis: false,
-      runVis: false,
-      snowVis: false,
-      travelVis: false,
-      yogaVis: false,
-      menVis: false,
-      womenVis: false,
-      kidsVis: false,
-      dealsVis: false,
-      moreVis: false,
+      visibility: {
+        campHikeVis: false,
+        climbVis: false,
+        cycleVis: false,
+        paddleVis: false,
+        runVis: false,
+        snowVis: false,
+        travelVis: false,
+        yogaVis: false,
+        menVis: false,
+        womenVis: false,
+        kidsVis: false,
+        dealsVis: false,
+        moreVis: false,
+      },
       campHikeSubmenu: [
         { title: 'Backpacks', items: ['Backpacking Packs', 'Day Packs', 'Hydration Packs', 'Baby Carrier Packs', 'Waist Packs', 'Accessories'] },
         { title: 'Tents', items: ['Backpacking Tents', 'Camping Tents', 'Roof-top Tents', 'Shelters', 'Bivy Sacks', 'Accessories'] },
@@ -189,7 +191,7 @@ class Submenu extends Component {
     this.onSignInClick = this.onSignInClick.bind(this);
   }
 
-  onSignInClick(e) {
+  onSubmenuClick(e) {
     this.setState({ signinVisible: !this.state.signinVisible });
   }
 
@@ -200,11 +202,25 @@ class Submenu extends Component {
         <ul id="AJsectionnav">
           <li className="AJmenulevel1item">
             Camp & Hike
-            {this.state.campHikeVis ?
-              <div className="AJmenulevel2wrap">
-                {/* <div className="AJmenulevel2title">Camp & Hike</div> */}
-
-              </div>
+            {this.state.visibility.campHikeVis ?
+              (<div className="AJmenulevel2modal">
+                <div class="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">Camp & Hike</div>
+                <Submenu2 lvl2={this.state.campHikeSubmenu}></Submenu2>
+                <div className="AJmerchComp">
+                  <img src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/CampAndHike.jpg"/>
+                  <ul className="AJextras">
+                    <li>New Arrivals</li>
+                    <li>Gym Climbing Gear</li>
+                    <li>Top Rated Gear</li>
+                    <li>Shop Climbing Gear</li>
+                  </ul>
+                </div>
+              </div>)
               : null
             }
           </li>

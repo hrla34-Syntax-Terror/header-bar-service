@@ -36,7 +36,7 @@ class SectionActions extends React.Component {
                 </svg>
               </button>
               <div class="mtns"> 
-                <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtnssignin"> 
                   <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
                 </svg> 
               </div>
@@ -53,8 +53,8 @@ class SectionActions extends React.Component {
                 <div id="AJdisclaimer">
                   By signing into your account, you agree to REI's Terms of Use and acknowledge you have read its Privacy Policy.
                 </div>
-                <button id="AJsigninbtn" className="AJmodalbtn">Sign in</button>
-                <button id="AJcreatebtn" className="AJmodalbtn">Create an account</button>
+                <button id="AJsigninbtn" className="AJsigninmodalbtn">Sign in</button>
+                <button id="AJcreatebtn" className="AJsigninmodalbtn">Create an account</button>
               </form>
             </div>
           </li> : null}
