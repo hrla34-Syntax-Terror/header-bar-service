@@ -21,6 +21,7 @@ class Submenu extends Component {
         dealsVis: false,
         moreVis: false,
       },
+    // #region submenuitems 
       campHikeSubmenu: [
         { title: 'Backpacks', items: ['Backpacking Packs', 'Day Packs', 'Hydration Packs', 'Baby Carrier Packs', 'Waist Packs', 'Accessories'] },
         { title: 'Tents', items: ['Backpacking Tents', 'Camping Tents', 'Roof-top Tents', 'Shelters', 'Bivy Sacks', 'Accessories'] },
@@ -186,14 +187,28 @@ class Submenu extends Component {
         { title: 'All Brands', items: [] },
         { title: 'All Categories', items: [] }
       ]
+    // #endregion 
     };
 
-    this.onSignInClick = this.onSignInClick.bind(this);
+    this.onSubmenuClick = this.onSubmenuClick.bind(this);
   }
 
   onSubmenuClick(e) {
-    this.setState({ signinVisible: !this.state.signinVisible });
+    let visCopy = Object.assign({}, this.state.visibility);
+    const initVis = this.state.visibility[e.target.getAttribute('visname')];
+
+    for (let key in visCopy) {
+      visCopy[key] = false;
+    }
+
+    console.log(e.target.getAttribute('visname'));
+    visCopy[e.target.getAttribute('visname')] = !initVis;
+
+    this.setState({
+      visibility: visCopy
+    });
   }
+
 
   render() {
     return (
@@ -201,10 +216,10 @@ class Submenu extends Component {
         <SectionActions></SectionActions>
         <ul id="AJsectionnav">
           <li className="AJmenulevel1item">
-            Camp & Hike
+            <div className="AJhovergreen AJmousepointer" visname="campHikeVis" onClick={this.onSubmenuClick}>Camp & Hike</div>
             {this.state.visibility.campHikeVis ?
               (<div className="AJmenulevel2modal">
-                <div class="AJmtn"> 
+                <div className="AJmtn"> 
                   <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
                     <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
                   </svg> 
@@ -225,40 +240,61 @@ class Submenu extends Component {
             }
           </li>
           <li className="AJmenulevel1item">
-            Climb
+            <div className="AJhovergreen AJmousepointer" visname="climbVis" onClick={this.onSubmenuClick}>Climb</div>
+            {this.state.visibility.climbVis ?
+              (<div className="AJmenulevel2modal">
+                <div className="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">Climb</div>
+                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <div className="AJmerchComp">
+                  <img src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Climb.jpg"/>
+                  <ul className="AJextras">
+                    <li>New Arrivals</li>
+                    <li>Gym Climbing Gear</li>
+                    <li>Top Rated Gear</li>
+                    <li>Shop Climbing Gear</li>
+                  </ul>
+                </div>
+              </div>)
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
-            Cycle
+            <div className="AJhovergreen AJmousepointer" visname="cycleVis" onClick={this.onSubmenuClick}>Cycle</div>
           </li>
           <li className="AJmenulevel1item">
-            Paddle
+            <div className="AJhovergreen AJmousepointer" visname="paddleVis" onClick={this.onSubmenuClick}>Paddle</div>
           </li>
           <li className="AJmenulevel1item">
-            Run
+            <div className="AJhovergreen AJmousepointer" visname="runVis" onClick={this.onSubmenuClick}>Run</div>
           </li>
           <li className="AJmenulevel1item">
-            Snow
+            <div className="AJhovergreen AJmousepointer" visname="snowVis" onClick={this.onSubmenuClick}>Snow</div>
           </li>
           <li className="AJmenulevel1item">
-            Travel
+            <div className="AJhovergreen AJmousepointer" visname="travelVis" onClick={this.onSubmenuClick}>Travel</div>
           </li>
           <li className="AJmenulevel1item">
-            Yoga
+            <div className="AJhovergreen AJmousepointer" visname="yogaVis" onClick={this.onSubmenuClick}>Yoga</div>
           </li>
           <li className="AJmenulevel1item">
-            Men
+            <div className="AJhovergreen AJmousepointer" visname="menVis" onClick={this.onSubmenuClick}>Men</div>
           </li>
           <li className="AJmenulevel1item">
-            Women
+            <div className="AJhovergreen AJmousepointer" visname="womenVis" onClick={this.onSubmenuClick}>Women</div>
           </li>
           <li className="AJmenulevel1item">
-            Kids
+            <div className="AJhovergreen AJmousepointer" visname="kidsVis" onClick={this.onSubmenuClick}>Kids</div>
           </li>
           <li className="AJmenulevel1item">
-            Deals
+            <div className="AJhovergreen AJmousepointer" visname="dealsVis" onClick={this.onSubmenuClick}>Deals</div>
           </li>
           <li className="AJmenulevel1item">
-            More
+            <div className="AJhovergreen AJmousepointer" visname="moreVis" onClick={this.onSubmenuClick}>More</div>
           </li>
           <li className="AJmenulevel1item">
             <div id="AJrei-outlet-wrap">

@@ -145,7 +145,7 @@ li.item:hover {
 /* --------------------- END: Top Nav --------------------- */
 
 
-
+/* #region mainheader*/
 /* Div that wraps the main header section */
 #AJmainheader {
   box-sizing: border-box;
@@ -241,18 +241,15 @@ input:focus::placeholder {
 }
 
 .AJmenulevel1item {
+  position: relative;
   box-sizing: border-box;
   color: white;
   fill: white;
   /* padding-top: 15px; */
-  cursor: pointer;
   font-size: 18px;
+  
 }
 
-.AJmenulevel1item:hover{
-  color: #a1c900;
-  fill: #a1c900;
-}
 
 #AJrei-outlet-wrap {
   /* display: inline-block; */
@@ -304,6 +301,9 @@ input:focus::placeholder {
   width: 25px;
 }
 
+.AJmousepointer {
+  cursor: pointer;
+}
 
 .AJhovergreen:hover {
   fill: #a1c900 !important;
@@ -324,6 +324,7 @@ input:focus::placeholder {
   flex-direction: column;
   justify-content: flex-start;
   padding: 30px 30px 10px;
+  z-index: 900;
 }
 
 #AJsigninwrapper {
@@ -337,7 +338,6 @@ input:focus::placeholder {
   position: absolute;
   top: -20px;
   background-color: #fff;
-  z-index: 900;
   left: 110px;
   width: 79px;
 }
@@ -453,6 +453,64 @@ input:focus::placeholder {
   width: 79px;
   z-index: 900;
   
-  background-color: #fff;
+  background-color: #efeee2;
 }
 
+/* #region submenu-level-2 */
+/* wraps the entire modal */
+.AJmenulevel2modal {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  left: 0;
+  width: 1200px;
+  /* max-width: 1200px; */
+  margin: 23px auto 0;
+  padding: 30px;
+  color: #222;
+  background-color: #efeee2;
+}
+
+/* title that appears within top of modal */
+.AJmenulevel2title {
+  box-sizing: border-box;
+  color: #222;
+  font: 28.43px Georgia, serif;
+  width: 100%;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+/* UL for entire submenu navigation */
+.AJmenulevel2 {
+  max-width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  border-right: 1px solid #ddd;
+}
+
+/* Li wrapper for level 2 item */
+.AJmenulevel2item {
+  width: 25%;
+  padding: 0 10px 16px 0;
+}
+/* Div title for the level 3 section */
+.AJmeulevel3title {
+  font-family: Georgia, serif;
+  font-weight: 500;
+  font-size: 16px;
+
+  margin-bottom: 8px;
+}
+/* UL wrapper for level 3 items */
+.AJmenulevel3 {
+
+}
+/* LI for level 3 items */
+.AJmenulevel3item{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding-top: 6px;
+}
+
+/* #endregion */
