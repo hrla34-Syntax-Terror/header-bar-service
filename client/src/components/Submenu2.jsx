@@ -20,7 +20,7 @@ class Submenu2 extends React.Component {
         {
           this.props.lvl2.map(lvl3 => (
             <li className="AJmenulevel2item">
-              <div className="AJmeulevel3title">
+              <div className="AJmenulevel3title">
                 {lvl3.title}
               </div>
               <ul className="AJmenulevel3">

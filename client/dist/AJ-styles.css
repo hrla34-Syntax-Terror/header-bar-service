@@ -491,11 +491,12 @@ input:focus::placeholder {
 
 /* Li wrapper for level 2 item */
 .AJmenulevel2item {
+  box-sizing: border-box;
   width: 25%;
   padding: 0 10px 16px 0;
 }
 /* Div title for the level 3 section */
-.AJmeulevel3title {
+.AJmenulevel3title {
   font-family: Georgia, serif;
   font-weight: 500;
   font-size: 16px;
@@ -514,3 +515,29 @@ input:focus::placeholder {
 }
 
 /* #endregion */
+.AJsidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.AJmerchComp {
+  padding-bottom: 16px;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+.AJmerchpic {
+  margin-bottom: 16px;
+}
+.AJextras {
+  margin-left: 19px;
+  width: auto;
+}
+
+.AJextras li {
+  font-size: 16px;
+  Font-family: Georgia, serif;
+  font-weight: 600;
+  line-height: 1.333;
+  margin-bottom: 8px;
+  word-wrap: normal;
+}

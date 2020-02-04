@@ -227,7 +227,7 @@ class Submenu extends Component {
                 <div className="AJmenulevel2title">Camp & Hike</div>
                 <Submenu2 lvl2={this.state.campHikeSubmenu}></Submenu2>
                 <div className="AJmerchComp">
-                  <img src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/CampAndHike.jpg"/>
+                  <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/CampAndHike.jpg"/>
                   <ul className="AJextras">
                     <li>New Arrivals</li>
                     <li>Gym Climbing Gear</li>
@@ -250,14 +250,19 @@ class Submenu extends Component {
                 </div>
                 <div className="AJmenulevel2title">Climb</div>
                 <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
-                <div className="AJmerchComp">
-                  <img src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Climb.jpg"/>
-                  <ul className="AJextras">
-                    <li>New Arrivals</li>
-                    <li>Gym Climbing Gear</li>
-                    <li>Top Rated Gear</li>
-                    <li>Shop Climbing Gear</li>
-                  </ul>
+                <div className="AJsidebar">
+                  <div className="AJmerchComp">
+                    <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Climb.jpg"/>
+                    <ul className="AJextras">
+                      <li>New Arrivals</li>
+                      <li>Gym Climbing Gear</li>
+                      <li>Top Rated Gear</li>
+                      <li>Shop Climbing Gear</li>
+                    </ul>
+                    <ul className="AJexplore">
+                      <li className="AJexploreitem"></li>
+                    </ul>
+                  </div>
                 </div>
               </div>)
               : null
@@ -265,33 +270,291 @@ class Submenu extends Component {
           </li>
           <li className="AJmenulevel1item">
             <div className="AJhovergreen AJmousepointer" visname="cycleVis" onClick={this.onSubmenuClick}>Cycle</div>
+            {this.state.visibility.cycleVis ?
+              (<div className="AJmenulevel2modal">
+                <div className="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">Cycle</div>
+                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <div className="AJsidebar">
+                  <div className="AJmerchComp">
+                    <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Cycle.jpg"/>
+                    <ul className="AJextras">
+                      <li>New Arrivals</li>
+                      <li>Indoor Cycling</li>
+                      <li>Shop cycling Gear</li>
+                    </ul>
+                    <ul className="AJexplore">
+                      <li className="AJexploreitem"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>)
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
             <div className="AJhovergreen AJmousepointer" visname="paddleVis" onClick={this.onSubmenuClick}>Paddle</div>
+            {this.state.visibility.paddleVis ?
+              (<div className="AJmenulevel2modal">
+                <div className="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">Paddle</div>
+                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <div className="AJsidebar">
+                  <div className="AJmerchComp">
+                    <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Paddle.jpg"/>
+                    <ul className="AJextras">
+                      <li>New Arrivals</li>
+                      <li>Women's Swimwear</li>
+                      <li>Shop Paddling Gear</li>
+                    </ul>
+                    <ul className="AJexplore">
+                      <li className="AJexploreitem"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>)
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
             <div className="AJhovergreen AJmousepointer" visname="runVis" onClick={this.onSubmenuClick}>Run</div>
+            {this.state.visibility.runVis ?
+              (<div className="AJmenulevel2modal">
+                <div className="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">Run</div>
+                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <div className="AJsidebar">
+                  <div className="AJmerchComp">
+                    <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Run.jpg"/>
+                    <ul className="AJextras">
+                      <li>New Spring Arrivals</li>
+                      <li>Waterproof Trail Running Shoes</li>
+                      <li>Cold Weather Training</li>
+                      <li>Shop Running Gear</li>
+                    </ul>
+                    <ul className="AJexplore">
+                      <li className="AJexploreitem"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>)
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
             <div className="AJhovergreen AJmousepointer" visname="snowVis" onClick={this.onSubmenuClick}>Snow</div>
+            {this.state.visibility.snowVis ?
+              (<div className="AJmenulevel2modal">
+                <div className="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">Snow</div>
+                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <div className="AJsidebar">
+                  <div className="AJmerchComp">
+                    <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Climb.jpg"/>
+                    <ul className="AJextras">
+                      <li>Shop Base Layers</li>
+                      <li>Ski Boot Fit Wizard</li>
+                      <li>Member Lift Ticket Deals</li>
+                      <li>Shop Snowsports Gear</li>
+                    </ul>
+                    <ul className="AJexplore">
+                      <li className="AJexploreitem"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>)
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
             <div className="AJhovergreen AJmousepointer" visname="travelVis" onClick={this.onSubmenuClick}>Travel</div>
+            {this.state.visibility.travelVis ?
+              (<div className="AJmenulevel2modal">
+                <div className="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">Climb</div>
+                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <div className="AJsidebar">
+                  <div className="AJmerchComp">
+                    <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Travel.jpg"/>
+                    <ul className="AJextras">
+                      <li>New Arrivals</li>
+                      <li>Top Rated Travel Gear</li>
+                      <li>Beyonder Travel Collection</li>
+                      <li>Shop Travel Gear</li>
+                    </ul>
+                    <ul className="AJexplore">
+                      <li className="AJexploreitem"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>)
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
             <div className="AJhovergreen AJmousepointer" visname="yogaVis" onClick={this.onSubmenuClick}>Yoga</div>
+            {this.state.visibility.yogaVis ?
+              (<div className="AJmenulevel2modal">
+                <div className="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">Yoga</div>
+                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <div className="AJsidebar">
+                  <div className="AJmerchComp">
+                    <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Yoga.jpg"/>
+                    <ul className="AJextras">
+                      <li>New Arrivals</li>
+                      <li>Street to Studio</li>
+                      <li>Maternity</li>
+                      <li>Shop Yoga</li>
+                    </ul>
+                    <ul className="AJexplore">
+                      <li className="AJexploreitem"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>)
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
             <div className="AJhovergreen AJmousepointer" visname="menVis" onClick={this.onSubmenuClick}>Men</div>
+            {this.state.visibility.menVis ?
+              (<div className="AJmenulevel2modal">
+                <div className="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">Men</div>
+                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <div className="AJsidebar">
+                  <div className="AJmerchComp">
+                    <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Travel.jpg"/>
+                    <ul className="AJextras">
+                      <li>Winter Jackets, Boots, Gloves & Hats</li>
+                      <li>Men's Snowsports Clothing</li>
+                      <li>Sale & Clearance: Up to 50% Off</li>
+                      <li>Shop Men's Clothing & Gear</li>
+                    </ul>
+                    <ul className="AJexplore">
+                      <li className="AJexploreitem"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>)
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
             <div className="AJhovergreen AJmousepointer" visname="womenVis" onClick={this.onSubmenuClick}>Women</div>
+            {this.state.visibility.womenVis ?
+              (<div className="AJmenulevel2modal">
+                <div className="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">Men</div>
+                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <div className="AJsidebar">
+                  <div className="AJmerchComp">
+                    <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Travel.jpg"/>
+                    <ul className="AJextras">
+                      <li>Winter Jackets, Boots, Gloves & Hats</li>
+                      <li>Women's Snowsports Clothing</li>
+                      <li>Sale & Clearance: Up to 50% Off</li>
+                      <li>Shop Women's Clothing & Gear</li>
+                    </ul>
+                    <ul className="AJexplore">
+                      <li className="AJexploreitem"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>)
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
             <div className="AJhovergreen AJmousepointer" visname="kidsVis" onClick={this.onSubmenuClick}>Kids</div>
+            {this.state.visibility.kidsVis ?
+              (<div className="AJmenulevel2modal">
+                <div className="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">Deals</div>
+                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <div className="AJsidebar">
+                  <div className="AJmerchComp">
+                    <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Kids.jpg"/>
+                    <ul className="AJextras">
+                      <li>Kids' Winter Jackets, Boots, Gloves & Hats</li>
+                      <li>Kids' Baselayers</li>
+                      <li>Sale & Clearance: Up to 50% Off</li>
+                      <li>Shop Kids' Clothing & Gear</li>
+                    </ul>
+                    <ul className="AJexplore">
+                      <li className="AJexploreitem"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>)
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
             <div className="AJhovergreen AJmousepointer" visname="dealsVis" onClick={this.onSubmenuClick}>Deals</div>
+            {this.state.visibility.dealsVis ?
+              (<div className="AJmenulevel2modal">
+                <div className="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">Deals</div>
+                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <div className="AJsidebar">
+                  <div className="AJmerchComp">
+                    <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Deals.jpg"/>
+                    <ul className="AJextras">
+                      <li>Clothing Deals</li>
+                      <li>50% Off Deals</li>
+                      <li>Featured Deals</li>
+                      <li>Shop All Deals</li>
+                    </ul>
+                    <ul className="AJexplore">
+                      <li className="AJexploreitem"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>)
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
             <div className="AJhovergreen AJmousepointer" visname="moreVis" onClick={this.onSubmenuClick}>More</div>
