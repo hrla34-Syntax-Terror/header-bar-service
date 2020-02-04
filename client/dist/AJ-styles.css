@@ -91,7 +91,7 @@ table {
   padding: 0 30px 0;
 }
 
-li.item {
+li.AJitem {
   color: #ccc;
   font-size: 14px;
   font-family: 'Roboto Condensed', sans-serif;
@@ -105,12 +105,12 @@ li.item:hover {
   cursor: pointer;
 }
 
-#selected {
+#AJselected {
   border-bottom: 1px solid #fff;
   color: #fff;
 }
 
-#selected:before{
+#AJselected:before{
   border-top-width: 0!important;
   border-right-width: 7px;
   border-bottom-width: 7px;
@@ -126,7 +126,7 @@ li.item:hover {
   transform: translate(-13px,-1px);
 }
 
-#selected:after {
+#AJselected:after {
   border-top-width: 0!important;
   border-right-width: 5px;
   border-bottom-width: 5px;
@@ -251,6 +251,31 @@ input:focus::placeholder {
   
 }
 
+.AJmenulevel1namewrapper {
+  position: relative;
+}
+
+.AJsubmenumtn:before {
+  content: '';
+  border-width: 0px 30px 30px 30px;
+  
+  position: absolute;
+  left: calc(15% - 25px);
+  bottom: -30px;
+  border-color: transparent transparent #efeee2;
+  border-style: solid;
+}
+
+.AJsubmenumtn:after {
+  content: '';
+  border-width: 0px 20px 20px 20px;
+  
+  position: absolute;
+  left: calc(15% + 15px);
+  bottom: -30px;
+  border-color: transparent transparent #efeee2;
+  border-style: solid;
+}
 
 #AJrei-outlet-wrap {
   /* display: inline-block; */
@@ -278,8 +303,9 @@ input:focus::placeholder {
   top: -40px;
   right: 20px;
   color: white;
+  fill: white;
   height: 50%;
-  width: 20%;
+  width: 23%;
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
 }
@@ -288,10 +314,6 @@ input:focus::placeholder {
   display: flex;
   align-items: flex-end;
   cursor: pointer;
-}
-
-#AJsectionactions{
-  fill: white;
 }
 
 .AJactionsvgwrap {
@@ -340,6 +362,7 @@ input:focus::placeholder {
   left: 110px;
   width: 79px;
 }
+
 
 #AJclosebutton {
   position: absolute;
@@ -463,8 +486,8 @@ input:focus::placeholder {
   align-items: flex-start;
   flex-wrap: wrap;
   left: 0;
-  width: 1200px;
-  /* max-width: 1200px; */
+  /* width: 1200px; */
+  max-width: 1200px;
   margin: 23px auto 0;
   padding: 30px;
   color: #222;
@@ -485,6 +508,7 @@ input:focus::placeholder {
 .AJmenulevel2 {
   max-width: 75%;
   display: flex;
+  box-sizing: border-box;
   flex-wrap: wrap;
   border-right: 1px solid #ddd;
 }
@@ -492,7 +516,8 @@ input:focus::placeholder {
 /* Li wrapper for level 2 item */
 .AJmenulevel2item {
   box-sizing: border-box;
-  width: 25%;
+  max-width: 25%;
+  flex-basis: 25%;
   padding: 0 10px 16px 0;
 }
 /* Div title for the level 3 section */
@@ -518,17 +543,21 @@ input:focus::placeholder {
 .AJsidebar {
   display: flex;
   flex-direction: column;
+  width: 25%;
+  box-sizing: border-box;
 }
 
 .AJmerchComp {
   padding-bottom: 16px;
   height: auto;
   border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
 }
 .AJmerchpic {
   margin-bottom: 16px;
 }
 .AJextras {
+  box-sizing: border-box;
   margin-left: 19px;
   width: auto;
 }
@@ -542,8 +571,42 @@ input:focus::placeholder {
   word-wrap: break-word;
 }
 
-/* .AJmenulevel2modal:before {
-  content: url(https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/mtn.svg);
-  fill: green;
-  
-} */
+/* .AJextras */
+
+.AJtagicon::before {
+  background-position: 0 0;
+}
+
+.AJcompassicon::before {
+  background-position: 0 -80px;
+}
+
+.AJnotepadicon::before {
+  background-position: 0 -120px;
+}
+
+.AJgearicon::before {
+  background-position: 0 -200px;
+}
+
+.AJbandannaicon::before {
+  background-position: 0 -320px;
+}
+
+.AJcalendaricon::before {
+  background-position: 0 -360px;
+}
+
+.AJcaricon::before {
+  background-position: 0 -400px;
+}
+
+.AJmegasprite::before {
+  width: 40px;
+  height: 40px;
+  content: '';
+  display: flex;
+  background-image: url(https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/mega-menu-sprite.png);
+  background-size: cover;
+  box-sizing: border-box;
+}
