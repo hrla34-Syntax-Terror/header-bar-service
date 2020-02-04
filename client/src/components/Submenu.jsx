@@ -558,6 +558,27 @@ class Submenu extends Component {
           </li>
           <li className="AJmenulevel1item">
             <div className="AJhovergreen AJmousepointer" visname="moreVis" onClick={this.onSubmenuClick}>More</div>
+            {this.state.visibility.moreVis ?
+              (<div className="AJmenulevel2modal">
+                <div className="AJmtn"> 
+                  <svg aria-hidden="true" version="1.0" xmlns="http://www.w3.org/2000/svg" width="80" height="19" fill="#000" className="AJmtns"> 
+                    <path d="M0 0 V25 H5 L30 0 L45 15 L54 7 L75 25 H80 V0 Z"></path>
+                  </svg> 
+                </div>
+                <div className="AJmenulevel2title">More</div>
+                <Submenu2 lvl2={this.state.moreSubmenu}></Submenu2>
+                <div className="AJsidebar">
+                  <div className="AJmerchComp">
+                    <ul className="AJextras">
+                    </ul>
+                    <ul className="AJexplore">
+                      <li className="AJexploreitem"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>)
+              : null
+            }
           </li>
           <li className="AJmenulevel1item">
             <div id="AJrei-outlet-wrap">
