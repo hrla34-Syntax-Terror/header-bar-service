@@ -179,9 +179,15 @@ li.item:hover {
   min-width: 952px;
 }
 
-form {
+.AJsearchwrapper {
+  display: flex;
+  position: relative;
+}
+
+.AJsearchwrapper form {
   display: flex;
   width: 50%;
+  height: 100%;
 }
 
 #AJsearchbox {
@@ -194,13 +200,13 @@ form {
   height: 100%;
 }
 
-::placeholder {
+/* ::placeholder {
   color: white;
-}
+} */
 
-input:focus::placeholder {
+/* input:focus::placeholder {
   color: transparent;
-}
+} */
 
 #AJsearchbutton {
   box-sizing: border-box;
@@ -213,6 +219,42 @@ input:focus::placeholder {
 
 #AJsearchbutton :hover {
   fill: #a1c900;
+}
+
+.AJautofillmodal {
+  width: 41.5%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px black solid;
+  z-index: 5;
+}
+
+.AJautofilllist {
+  box-sizing: border-box;
+}
+
+.AJautofillitems {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 35px;
+  color: #292929;
+  font-family: 'Roboto', sans-serif;
+
+  padding: 0 24px;
+}
+
+.AJautofillitems:hover {
+  background-color: #e9e9e9;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.AJautofillhighlight {
+  font-weight: 400;
+  color: inherit;
 }
 
 #AJmainheader hr {
