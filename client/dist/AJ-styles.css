@@ -571,10 +571,42 @@ input:focus::placeholder {
   word-wrap: break-word;
 }
 
-/* .AJextras */
+/* Wraps the explore item */
+.AJexploreItem {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 15px;
+  padding: 9px;
+}
 
+/* Wraps the two text sections of an explore item */
+.AJexploretextsection {
+  display: flex;
+  flex-direction: column;
+}
+
+.AJexplorename {
+  font-size: 16px;
+  font-family: Georgia, serif;
+  font-weight: 500;
+  text-transform: none;
+  font-stretch: normal;
+  line-height: 1.333;
+  color: #004e00;
+}
+.AJexploresubtitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #004e00;
+}
+
+/* #region Explore Icons Section */
 .AJtagicon::before {
   background-position: 0 0;
+}
+
+.AJspeechbubbleicon::before {
+  background-position: 0 -40px;
 }
 
 .AJcompassicon::before {
@@ -585,8 +617,20 @@ input:focus::placeholder {
   background-position: 0 -120px;
 }
 
+.AJpickaxeicon::before {
+  background-position: 0 -160px;
+}
+
 .AJgearicon::before {
   background-position: 0 -200px;
+}
+
+.AJleaficon::before {
+  background-position: 0 -240px;
+}
+
+.AJbandannaicon::before {
+  background-position: 0 -280px;
 }
 
 .AJbandannaicon::before {
@@ -601,7 +645,11 @@ input:focus::placeholder {
   background-position: 0 -400px;
 }
 
-.AJmegasprite::before {
+.AJbooticon::before {
+  background-position: 0 -440px;
+}
+
+.AJexploreIcon::before {
   width: 40px;
   height: 40px;
   content: '';
@@ -610,3 +658,10 @@ input:focus::placeholder {
   background-size: cover;
   box-sizing: border-box;
 }
+
+.AJexploreIcon {
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+/* #endregion */
+

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SectionActions from './SectionActions.jsx';
 import Submenu2 from './Submenu2.jsx';
+import ExploreItem from './ExploreItem.jsx';
 
 class Submenu extends Component {
   constructor(props) {
@@ -233,6 +234,13 @@ class Submenu extends Component {
                       <li>Shop Climbing Gear</li>
                     </ul>
                   </div>
+                  <ul className="AJexploresection">
+                    <ExploreItem icon="AJnotepadicon" name="Expert Advice" subtitle="Checklists and how-tos"/>
+                    <ExploreItem icon="AJcompassicon" name="Classes" subtitle="Expert-led instruction"/>
+                    <ExploreItem icon="AJtagicon" name="REI Adventures Trips" subtitle="Award-winning trips"/>
+                    <ExploreItem icon="AJcalendaricon" name="Personal Outfitting" subtitle="Schedule a visit"/>
+                    <ExploreItem icon="AJcaricon" name="Gear Rentals" subtitle="Outdoor rental equipment"/>
+                  </ul>
                 </div>
               </div>)
               : null
@@ -256,6 +264,12 @@ class Submenu extends Component {
                       <li>Shop Climbing Gear</li>
                     </ul>
                   </div>
+                  <ul className="AJexploresection">
+                    <ExploreItem icon="AJnotepadicon" name="Expert Advice" subtitle="Checklists and how-tos"/>
+                    <ExploreItem icon="AJcompassicon" name="Classes" subtitle="Expert-led instruction"/>
+                    <ExploreItem icon="AJtagicon" name="REI Adventures Trips" subtitle="Award-winning trips"/>
+                    <ExploreItem icon="AJcaricon" name="Gear Rentals" subtitle="Outdoor rental equipment"/>
+                  </ul>
                 </div>
               </div>)
               : null
@@ -268,7 +282,7 @@ class Submenu extends Component {
             {this.state.visibility.cycleVis ?
               (<div className="AJmenulevel2modal">
                 <div className="AJmenulevel2title">Cycle</div>
-                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <Submenu2 lvl2={this.state.cycleSubmenu}></Submenu2>
                 <div className="AJsidebar">
                   <div className="AJmerchComp">
                     <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Cycle.jpg"/>
@@ -277,8 +291,14 @@ class Submenu extends Component {
                       <li>Indoor Cycling</li>
                       <li>Shop cycling Gear</li>
                     </ul>
-                    
                   </div>
+                  <ul className="AJexploresection">
+                    <ExploreItem icon="AJnotepadicon" name="Expert Advice" subtitle="Checklists and how-tos"/>
+                    <ExploreItem icon="AJgearicon" name="Shop Services" subtitle="We'll fix you up"/>
+                    <ExploreItem icon="AJcompassicon" name="Classes" subtitle="Expert-led instruction"/>
+                    <ExploreItem icon="AJtagicon" name="REI Adventures Trips" subtitle="Award-winning trips"/>
+                    <ExploreItem icon="AJcaricon" name="Gear Rentals" subtitle="Outdoor rental equipment"/>
+                  </ul>
                 </div>
               </div>)
               : null
@@ -291,7 +311,7 @@ class Submenu extends Component {
             {this.state.visibility.paddleVis ?
               (<div className="AJmenulevel2modal">
                 <div className="AJmenulevel2title">Paddle</div>
-                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <Submenu2 lvl2={this.state.paddleSubmenu}></Submenu2>
                 <div className="AJsidebar">
                   <div className="AJmerchComp">
                     <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Paddle.jpg"/>
@@ -300,8 +320,13 @@ class Submenu extends Component {
                       <li>Women's Swimwear</li>
                       <li>Shop Paddling Gear</li>
                     </ul>
-                    
                   </div>
+                  <ul className="AJexploresection">
+                    <ExploreItem icon="AJnotepadicon" name="Expert Advice" subtitle="Checklists and how-tos"/>
+                    <ExploreItem icon="AJcompassicon" name="Classes" subtitle="Expert-led instruction"/>
+                    <ExploreItem icon="AJtagicon" name="REI Adventures Trips" subtitle="Award-winning trips"/>
+                    <ExploreItem icon="AJcaricon" name="Gear Rentals" subtitle="Outdoor rental equipment"/>
+                  </ul>
                 </div>
               </div>)
               : null
@@ -314,7 +339,7 @@ class Submenu extends Component {
             {this.state.visibility.runVis ?
               (<div className="AJmenulevel2modal">
                 <div className="AJmenulevel2title">Run</div>
-                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <Submenu2 lvl2={this.state.runSubmenu}></Submenu2>
                 <div className="AJsidebar">
                   <div className="AJmerchComp">
                     <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Run.jpg"/>
@@ -324,8 +349,11 @@ class Submenu extends Component {
                       <li>Cold Weather Training</li>
                       <li>Shop Running Gear</li>
                     </ul>
-                    
                   </div>
+                  <ul className="AJexploresection">
+                    <ExploreItem icon="AJnotepadicon" name="Expert Advice" subtitle="Checklists and how-tos"/>
+                    <ExploreItem icon="AJcompassicon" name="Classes" subtitle="Expert-led instruction"/>
+                  </ul>
                 </div>
               </div>)
               : null
@@ -338,7 +366,7 @@ class Submenu extends Component {
             {this.state.visibility.snowVis ?
               (<div className="AJmenulevel2modal">
                 <div className="AJmenulevel2title">Snow</div>
-                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <Submenu2 lvl2={this.state.snowSubmenu}></Submenu2>
                 <div className="AJsidebar">
                   <div className="AJmerchComp">
                     <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Climb.jpg"/>
@@ -348,8 +376,15 @@ class Submenu extends Component {
                       <li>Member Lift Ticket Deals</li>
                       <li>Shop Snowsports Gear</li>
                     </ul>
-                    
                   </div>
+                  <ul className="AJexploresection">
+                    <ExploreItem icon="AJnotepadicon" name="Expert Advice" subtitle="Checklists and how-tos"/>
+                    <ExploreItem icon="AJgearicon" name="Shop Services" subtitle="We'll fix you up"/>
+                    <ExploreItem icon="AJcompassicon" name="Classes" subtitle="Expert-led instruction"/>
+                    <ExploreItem icon="AJtagicon" name="REI Adventures Trips" subtitle="Award-winning trips"/>
+                    <ExploreItem icon="AJcaricon" name="Gear Rentals" subtitle="Outdoor rental equipment"/>
+                    <ExploreItem icon="AJbooticon" name="Ski Boot Fit Wizard" subtitle="Find the right boots for you"/>
+                  </ul>
                 </div>
               </div>)
               : null
@@ -361,8 +396,8 @@ class Submenu extends Component {
             </div>
             {this.state.visibility.travelVis ?
               (<div className="AJmenulevel2modal">
-                <div className="AJmenulevel2title">Climb</div>
-                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <div className="AJmenulevel2title">Travel</div>
+                <Submenu2 lvl2={this.state.travelSubmenu}></Submenu2>
                 <div className="AJsidebar">
                   <div className="AJmerchComp">
                     <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Travel.jpg"/>
@@ -372,8 +407,10 @@ class Submenu extends Component {
                       <li>Beyonder Travel Collection</li>
                       <li>Shop Travel Gear</li>
                     </ul>
-                    
                   </div>
+                  <ExploreItem icon="AJtagicon" name="REI Adventures Trips" subtitle="Award-winning trips"/>
+                  <ExploreItem icon="AJnotepadicon" name="Expert Advice" subtitle="Checklists & how-tos"/>
+                  <ExploreItem icon="AJcalendaricon" name="Personal Outfitting" subtitle="Schedule a visit"/>
                 </div>
               </div>)
               : null
@@ -386,7 +423,7 @@ class Submenu extends Component {
             {this.state.visibility.yogaVis ?
               (<div className="AJmenulevel2modal">
                 <div className="AJmenulevel2title">Yoga</div>
-                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <Submenu2 lvl2={this.state.yogaSubmenu}></Submenu2>
                 <div className="AJsidebar">
                   <div className="AJmerchComp">
                     <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Yoga.jpg"/>
@@ -396,8 +433,8 @@ class Submenu extends Component {
                       <li>Maternity</li>
                       <li>Shop Yoga</li>
                     </ul>
-                    
                   </div>
+                  <ExploreItem icon="AJnotepadicon" name="Expert Advice" subtitle="Checklists & how-tos"/>
                 </div>
               </div>)
               : null
@@ -410,7 +447,7 @@ class Submenu extends Component {
             {this.state.visibility.menVis ?
               (<div className="AJmenulevel2modal">
                 <div className="AJmenulevel2title">Men</div>
-                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <Submenu2 lvl2={this.state.menSubmenu}></Submenu2>
                 <div className="AJsidebar">
                   <div className="AJmerchComp">
                     <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Travel.jpg"/>
@@ -420,8 +457,9 @@ class Submenu extends Component {
                       <li>Sale & Clearance: Up to 50% Off</li>
                       <li>Shop Men's Clothing & Gear</li>
                     </ul>
-                    
                   </div>
+                  <ExploreItem icon="AJnotepadicon" name="Expert Advice" subtitle="Checklists & how-tos"/>
+                  <ExploreItem icon="AJcalendaricon" name="Personal Outfitting" subtitle="Schedule a visit"/>
                 </div>
               </div>)
               : null
@@ -434,7 +472,7 @@ class Submenu extends Component {
             {this.state.visibility.womenVis ?
               (<div className="AJmenulevel2modal">
                 <div className="AJmenulevel2title">Women</div>
-                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <Submenu2 lvl2={this.state.womenSubmenu}></Submenu2>
                 <div className="AJsidebar">
                   <div className="AJmerchComp">
                     <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Travel.jpg"/>
@@ -444,8 +482,11 @@ class Submenu extends Component {
                       <li>Sale & Clearance: Up to 50% Off</li>
                       <li>Shop Women's Clothing & Gear</li>
                     </ul>
-
                   </div>
+                  <ExploreItem icon="AJtagicon" name="Women's Adventures" subtitle="Award-winning trips"/>
+                  <ExploreItem icon="AJnotepadicon" name="Expert Advice" subtitle="Checklists & how-tos"/>
+                  <ExploreItem icon="AJnotebandannaicon" name="Force of Nature" subtitle="Women in the outdoors"/>
+                  <ExploreItem icon="AJcalendaricon" name="Personal Outfitting" subtitle="Schedule a visit"/>
                 </div>
               </div>)
               : null
@@ -458,7 +499,7 @@ class Submenu extends Component {
             {this.state.visibility.kidsVis ?
               (<div className="AJmenulevel2modal">
                 <div className="AJmenulevel2title">Kids</div>
-                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <Submenu2 lvl2={this.state.kidsSubmenu}></Submenu2>
                 <div className="AJsidebar">
                   <div className="AJmerchComp">
                     <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Kids.jpg"/>
@@ -468,8 +509,9 @@ class Submenu extends Component {
                       <li>Sale & Clearance: Up to 50% Off</li>
                       <li>Shop Kids' Clothing & Gear</li>
                     </ul>
-                    
-                  </div>
+                  </div> 
+                  <ExploreItem icon="AJnotepadicon" name="Expert Advice" subtitle="Checklists & how-tos"/>
+                  <ExploreItem icon="AJtagicon" name="REI Adventure Trips" subtitle="Award-winning trips"/>
                 </div>
               </div>)
               : null
@@ -482,7 +524,7 @@ class Submenu extends Component {
             {this.state.visibility.dealsVis ?
               (<div className="AJmenulevel2modal">
                 <div className="AJmenulevel2title">Deals</div>
-                <Submenu2 lvl2={this.state.climbSubmenu}></Submenu2>
+                <Submenu2 lvl2={this.state.dealsSubmenu}></Submenu2>
                 <div className="AJsidebar">
                   <div className="AJmerchComp">
                     <img className="AJmerchpic" src="https://hrla34-syntax-terror-anthony.s3-us-west-1.amazonaws.com/Deals.jpg"/>
@@ -508,6 +550,16 @@ class Submenu extends Component {
                 <div className="AJmenulevel2title">More</div>
                 <Submenu2 lvl2={this.state.moreSubmenu}></Submenu2>
                 <div className="AJsidebar">
+                  <ul className="AJexploresection">
+                    <ExploreItem icon="AJpickaxeicon" name="Membership" subtitle="Great deals & benefits"/>
+                    <ExploreItem icon="AJcompassicon" name="Classes & Events" subtitle="Expert-led instruction"/>
+                    <ExploreItem icon="AJtagicon" name="REI Adventures Trips" subtitle="Award-winning trips"/>
+                    <ExploreItem icon="AJnotepadicon" name="Expert Advice" subtitle="Checklists and how-tos"/>
+                    <ExploreItem icon="AJtreeicon" name="Opt Outside" subtitle="Go out with us"/>
+                    <ExploreItem icon="AJbandannaicon" name="Force of Nature" subtitle="Women in the outdoors"/>
+                    <ExploreItem icon="AJspeechbubbleicon" name="Co-op Journal" subtitle="Stories of a life outdoors"/>
+                    <ExploreItem icon="AJleaficon" name="Stewardship" subtitle="Taking care of places we love"/>
+                  </ul>
                 </div>
               </div>)
               : null
