@@ -52,12 +52,6 @@ table {
 
 /* #endregion */
 /*-------------------- END: CSS RESET -------------------- */
-
-/* Exists just to make the scroll bar appear */
-#spacer {
-  height: 5000px;
-  background-color: grey;
-}
 /* Element that we attach to */
 #header {
   /* background-color: white; */
