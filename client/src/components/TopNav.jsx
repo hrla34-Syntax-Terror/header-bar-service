@@ -5,15 +5,15 @@ var TopNav = (props) => {
     <div id="AJnavwrapperbackground">
       <div id="AJnavwrapper">
         <ul id="AJtopnav">
-          <li className="item" id="selected">SHOP REI</li>
-          <li className="item">REI OUTLET</li>
-          <li className="item">USED GEAR</li>
-          <li className="item">REI ADVENTURES</li>
-          <li className="item">CLASSES &amp; EVENTS</li>
-          <li className="item">EXPERT ADVICE</li>
-          <li className="item">CO-OP JOURNAL</li>
-          <li className="item">CONVERSATIONS</li>
-          <li className="item">CAMPING PROJECT</li>
+          <li className="AJitem" id="AJselected">SHOP REI</li>
+          <li className="AJitem">REI OUTLET</li>
+          <li className="AJitem">USED GEAR</li>
+          <li className="AJitem">REI ADVENTURES</li>
+          <li className="AJitem">CLASSES &amp; EVENTS</li>
+          <li className="AJitem">EXPERT ADVICE</li>
+          <li className="AJitem">CO-OP JOURNAL</li>
+          <li className="AJitem">CONVERSATIONS</li>
+          <li className="AJitem">CAMPING PROJECT</li>
         </ul>
       </div>
     </div>
