@@ -373,7 +373,7 @@ li.item:hover {
   color: #a1c900 !important;
 }
 
-#AJsigninmodal{
+.AJsigninmodal{
   position: absolute;
   top: 115px;
   left: -105px;

@@ -5,25 +5,39 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      searchVisibility: false,
       autoFills: [],
       matchingFillsIndex: [],
       matchingFillsFormatted: []
     };
-    this.DOMParser = new DOMParser();
     this.onChangeHandler = this.onChangeHandler.bind(this);
+    this.onBlurHandler = this.onBlurHandler.bind(this);
+    this.onFocusHandler = this.onFocusHandler.bind(this);
   }
 
 // on mount, get all the potential autofills
-componentDidMount() {
-  axios
-    .get('/api')
-    .then(autoFills => {
-      this.setState({
-        autoFills: autoFills.data
-      });
-    })
-    .catch(err => console.error(err));
-}
+  componentDidMount() {
+    axios
+      .get('/api')
+      .then(autoFills => {
+        this.setState({
+          autoFills: autoFills.data
+        });
+      })
+      .catch(err => console.error(err));
+  }
+
+  onBlurHandler() {
+    this.setState({
+      searchVisibility: false
+    });
+  }
+
+  onFocusHandler() {
+    this.setState({
+      searchVisibility: true
+    });
+  }
 
   // on change of the search field
   // filter the autoFill list for anything that contains the substring
@@ -32,11 +46,12 @@ componentDidMount() {
     if (searchTerm === '') {
       this.setState({
         matchingFillsIndex: [],
-        matchingFillsFormatted: []
+        matchingFillsFormatted: [],
+        searchVisibility: false
       });
       return;
     }
-    
+
     let regexString = '';
 
     // this loop builds a regEx expression that ignores whitespace between all characters
@@ -75,7 +90,8 @@ componentDidMount() {
 
     this.setState({
       matchingFillsIndex,
-      matchingFillsFormatted
+      matchingFillsFormatted,
+      searchVisibility: true
     });
   }
 
@@ -113,7 +129,7 @@ componentDidMount() {
 
   render() {
     return (
-      <div className="AJsearchwrapper">
+      <div className="AJsearchwrapper" onFocus={this.onFocusHandler} onBlur={this.onBlurHandler}>
         <form onSubmit={(e) => e.preventDefault()}>
           <input id="AJsearchbox" placeholder="Search for great gear & clothing" onChange={this.onChangeHandler}></input>
           <button id="AJsearchbutton">
@@ -121,6 +137,7 @@ componentDidMount() {
               <path d="M20.707 19.294a1 1 0 01-1.414 1.414l-4.244-4.245a7.5 7.5 0 111.414-1.414l4.244 4.245zM10.5 16a5.5 5.5 0 100-11 5.5 5.5 0 000 11z"/>
             </svg>
           </button>
+          {(this.state.searchVisibility ? 
           <div className="AJautofillmodal">
             <ul className="AJautofilllist">
             {
@@ -132,6 +149,7 @@ componentDidMount() {
             }
             </ul>
           </div>
+          : null)}
         </form>
       </div>
     );
