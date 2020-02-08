@@ -10,7 +10,7 @@
   "scripts": {
     "seed": "node database/seed.js",
     "test": "jest",
-    "start": "node server/index.js",
+    "start": "nodemon server/index.js",
     "build": "webpack -d -w"
   },
   "jest": {

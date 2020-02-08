@@ -18,7 +18,8 @@ class SearchBar extends React.Component {
 // on mount, get all the potential autofills
   componentDidMount() {
     axios
-      .get('http://localhost:3001/api')
+      // .get('http://localhost:3001/api')
+      .get('/api')
       .then(autoFills => {
         this.setState({
           autoFills: autoFills.data
