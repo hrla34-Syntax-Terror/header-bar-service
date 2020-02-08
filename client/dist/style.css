@@ -528,6 +528,7 @@ li.item:hover {
   padding: 30px;
   color: #222;
   background-color: #efeee2;
+  z-index: 400;
 }
 
 /* title that appears within top of modal */
