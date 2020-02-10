@@ -15,4 +15,4 @@ app.use(cors());
 app.use('/api', router);
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.listen(port, () => console.log(`\u001b[1;34m Server listening on port ${port}`));
+app.listen(port, () => console.log(`\u001b[1;34mServer listening on port ${port}\u001B[37m`));
