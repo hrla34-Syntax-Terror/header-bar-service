@@ -10,7 +10,7 @@ var searchSchema = mongoose.Schema({
 });
 
 var db = mongoose.connect(mongoURI, {useNewUrlParser: true})
-  .then(() => console.log('\u001b[1;35m MongoDB Connected'));
+  .then(() => console.log('\u001b[1;35mMongoDB Connected\u001B[37m'));
 
 var searchModel = mongoose.model('searchitem', searchSchema);
 
