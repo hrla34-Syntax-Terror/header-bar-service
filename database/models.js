@@ -6,5 +6,8 @@ module.exports = {
   },
   addItems: (items) => {
     return models.create(items);
+  },
+  deleteAll: () => {
+    return models.deleteMany();
   }
 };
