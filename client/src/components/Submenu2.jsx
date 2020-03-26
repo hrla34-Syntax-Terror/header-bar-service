@@ -1,7 +1,6 @@
 /*
-Submenu2 is to show all the menu items from the submenu navigation bar.
-It'll basically be a list of lists.
-
+  Submenu2 is to show all the menu items from the submenu navigation bar.
+  It'll basically be a list of lists.
 */
 
 import React from 'react';
