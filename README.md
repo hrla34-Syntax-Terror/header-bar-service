@@ -9,6 +9,9 @@
   - https://github.com/hrla34-Syntax-Terror/footer-service
   - https://github.com/hrla34-Syntax-Terror/reviews-service
 
+## Preview Picture
+![Snapshot of the project](https://github.com/hrla34-Syntax-Terror/header-bar-service/blob/master/FEC.png)
+
 ## Table of Contents
 
 1. [Usage](#Usage)
