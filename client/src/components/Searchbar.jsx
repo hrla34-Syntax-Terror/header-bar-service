@@ -19,7 +19,6 @@ class SearchBar extends React.Component {
   componentDidMount() {
     axios
       .get('http://localhost:3001/api')
-      // .get('/api')
       .then(autoFills => {
         this.setState({
           autoFills: autoFills.data

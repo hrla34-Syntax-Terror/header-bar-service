@@ -1,5 +1,4 @@
 import React from 'react';
-import Modal from 'react-modal';
 
 class SectionActions extends React.Component {
   constructor(props) {
@@ -41,7 +40,6 @@ class SectionActions extends React.Component {
           </div>
         </li>
         {this.state.signinVisible ?
-          // <Modal isOpen={this.state.signinVisible} onRequestClose={this.closeSignin} className="AJsigninmodal">
             <li className="AJsigninmodal">
               <div id="AJsigninwrapper" onBlur={this.onBlurSignIn}>
                 <button id="AJclosebutton" onClick={this.onSignInClick}>
@@ -72,7 +70,7 @@ class SectionActions extends React.Component {
                 </form>
               </div>
             </li>
-          /*</Modal>*/ : null}
+           : null}
         <li className="AJstores AJhovergreen">
           <div>
             STORES
