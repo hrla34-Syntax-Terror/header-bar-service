@@ -10,6 +10,7 @@
   - https://github.com/hrla34-Syntax-Terror/reviews-service
 
 ## Preview Picture
+
 ![Snapshot of the project](https://github.com/hrla34-Syntax-Terror/header-bar-service/blob/master/FEC.png)
 
 ## Table of Contents
@@ -32,7 +33,7 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 ### Installing Dependencies
 
-From within the root directory:
+Run from within the root directory:
 
 ```sh
 npm install -g webpack
@@ -40,8 +41,10 @@ npm install
 ```
 
 ### Start Application
+
+Run from within the root directory:
 ```
 grunt
 ```
-Then navigate to localhost:3001
+Then navigate to localhost:3001 on any browser.
 
