@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+> Emulation of the REI (ecreational Equipment, Inc.) online product page with Service Oriented Architecture (SOA) design. This module is for the top header bar, including the search bar, navigation bar, and submenus. To view all components on a single page, please visit http://18.144.10.148:8000/.
 
 ## Related Projects
 
@@ -17,14 +17,13 @@
 
 ## Usage
 
-> Some usage instructions
+> This is a practice of CSS and ReactJS design with minimal functionallity.
 
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node 6.13.0
-- etc
 
 ## Development
 
@@ -36,4 +35,10 @@ From within the root directory:
 npm install -g webpack
 npm install
 ```
+
+### Start Application
+```
+grunt
+```
+Then navigate to localhost:3001
 
