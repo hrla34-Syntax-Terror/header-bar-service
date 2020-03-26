@@ -4,10 +4,10 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/hrla34-Syntax-Terror/CT-service
+  - https://github.com/hrla34-Syntax-Terror/product-view-service
+  - https://github.com/hrla34-Syntax-Terror/footer-service
+  - https://github.com/hrla34-Syntax-Terror/reviews-service
 
 ## Table of Contents
 
