@@ -1,45 +1,37 @@
 const mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
 const models = require('../database/models.js');
+mongoose.Promise = global.Promise;
+
+var sampleSearches = [{ id: 1, name: "testItem1" }, { id: 2, name: "testItem2" }, { id: 3, name: "testItem3" }];
 
 describe('database', () => {
 
-  // importing models will actually create the connection for us!
-  // just make sure we dump everything before we start!
-  beforeAll(async (done) => {
-    await mongoose.connection.collections['searchitems'].deleteMany();
-    done();
+  beforeEach(async () => {
+    await models.deleteAll();
+    await models.addItems(sampleSearches);
   });
 
-  afterAll(async (done) => {
+  afterAll(async () => {
     await mongoose.connection.close(true)
-    done();
   });
 
-  test ('should get all the items', (done) => {
-    var sampleSearches = [{ id: 1, name: "testItem1" }, { id: 2, name: "testItem2" }, { id: 3, name: "testItem3" }];
-    return models.addItems(sampleSearches)
-      .then(() => {
-        return models.getAll();
+  it(`Gets everything from the database`, () => {
+    return models.getAll()
+      .then((allItems) => {
+        expect(allItems.length).toBe(3);
       })
-      .then(dbResponse => {
-        expect(dbResponse.length).toBe(3);
-        done();
+  })
+
+  it(`Adds items to the database`, () => {
+    let oneItem = [{id: 4, name: "AddedItem"}];
+
+    return models.addItems(oneItem)
+      .then(() => {
+        return models.getAll()
+      })
+      .then((allItems) => {
+        expect(allItems.length).toBe(4);
       });
-  });
-  
-  test ('adds a search entry', (done) => {
-    return models.addItems({id: 1000, name: "test_item"})
-    .then(() => {
-      return models.getAll();
-    })
-    .then(dbResponse => {
-      expect(dbResponse[0]).toEqual(expect.objectContaining({
-        id: expect.any(Number),
-        name: expect.any(String)
-      }));
-      done();
-    });
-  });
+  })
 });
 
