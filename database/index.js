@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const searchSchema = require('./schema.js');
 mongoose.Promise = global.Promise;
-const mongoURI = 'mongodb://3.101.6.196:27017/rei';
+// const mongoURI = 'mongodb://3.101.6.196:27017/rei';
+const mongoURI = 'mongodb://localhost:27017/rei';
 
 mongoose.set('useCreateIndex', true);
 
