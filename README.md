@@ -21,7 +21,7 @@
 
 ## Usage
 
-> This is a practice of CSS and ReactJS design with minimal functionallity.
+> This is a practice of CSS and ReactJS design with minimal functionality.
 
 ## Requirements
 
