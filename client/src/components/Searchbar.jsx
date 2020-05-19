@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import SampleData from '../../SampleData/data.json';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -15,16 +16,25 @@ class SearchBar extends React.Component {
     this.onFocusHandler = this.onFocusHandler.bind(this);
   }
 
-// on mount, get all the potential autofills
+  // on mount, get all the potential autofills
   componentDidMount() {
-    axios
-      .get('http://localhost:3001/api')
-      .then(autoFills => {
-        this.setState({
-          autoFills: autoFills.data
-        });
-      })
-      .catch(err => console.error(err));
+    /**
+     * This block would be used to get data from the database
+     * commenting this out and replacing it with an import
+     * for easy EC2 deployment for demos.
+     */
+    // axios
+    //   .get('http://localhost:3001/api')
+    //   .then(autoFills => {
+    //     this.setState({
+    //       autoFills: autoFills.data
+    //     });
+    //   })
+    //   .catch(err => console.error(err));
+
+    this.setState({
+      autoFills: SampleData
+    });
   }
 
   onBlurHandler() {
