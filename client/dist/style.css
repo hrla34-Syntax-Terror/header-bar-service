@@ -67,6 +67,11 @@ html {
   background-color: #000;
 }
 
+::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
 /* --------------------- START: Top Nav --------------------- */
 /* #region TopNav */
 /* Div that wraps the ul */
@@ -202,6 +207,7 @@ li.item:hover {
   border: 0px none;
   height: 100%;
   /* box-sizing: border-box; */
+  font-size: 18px;
 }
 
 
@@ -211,6 +217,7 @@ li.item:hover {
   padding: 11px;
   width: 8.75%;
   fill: white;
+  border: .1rem solid transparent;
 }
 
 #AJsearchbutton :hover {
