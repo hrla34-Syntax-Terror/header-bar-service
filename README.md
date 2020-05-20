@@ -1,6 +1,6 @@
 # Project Name
 
-> Emulation of the REI (Recreational Equipment, Inc.) online product page with Service Oriented Architecture (SOA) design. This module is for the top header bar, including the search bar, navigation bar, and submenus. To view all components on a single page, please visit http://54.177.90.50:3000/.
+> Emulation of the REI (Recreational Equipment, Inc.) online product page with Service Oriented Architecture (SOA) design. This module is for the top header bar, including the search bar, navigation bar, and submenus. To view to view this component, please visit http://54.177.90.50:3000/.
 
 ## Related Projects
 
